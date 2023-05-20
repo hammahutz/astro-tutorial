@@ -8,6 +8,10 @@ npm create astro@latest -- --template minimal
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a86e8dec-b7d0-4f77-b14d-4413c2bb689b/deploy-status)](https://app.netlify.com/sites/lighthearted-palmier-2ef88a/deploys)
+
+[![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)](https://lighthearted-palmier-2ef88a.netlify.app/)
+
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
 ## 🚀 Project Structure
