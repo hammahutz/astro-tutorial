@@ -1,5 +1,34 @@
-
 ---
+const pageTitle = "About me";
+
+import '../styles/global.css';
+
+const identity = {
+	firstName: "Hammahutz",
+	country: "Sweden",
+	occupationn: "Water/Sewer-Engineer",
+	hobbies: ["programning", "gameing", "motorcycle"],
+	skills: [
+		"HTML",
+		"CSS",
+		"JavaScript",
+		"React",
+		"Astro",
+		"C#",
+		".NET",
+		"ASP",
+		"SQL",
+	],
+};
+
+const happy: boolean = true;
+const finished: boolean = false;
+const goal: number = 3;
+
+const hobbieColor = "navy";
+const skillColor = "green"
+const fontWeight =  "bold";
+const textCase = "capitalize";
 ---
 
 <html lang="en">
@@ -8,12 +37,80 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
+		<style define:vars={{hobbieColor, fontWeight, textCase, skillColor}}>
+			h1 {
+				color: purple;
+				font-size: 4rem;
+			}
+			.skill {
+				color: var(--skillColor);
+				font-weight: var(--fontWeight);
+			}
+			.hobbies {
+				color: var(--hobbieColor);
+				font-weight: var(--fontWeight);
+				text-transform: var(--textCase)
+			}
+		</style>
 	</head>
 	<body>
-		<h1>About me</h1>
-		<h2>... and my new Astro site!</h2>
-        <p>I am working though Astro's introductory tutorial. This is the second page on my website, ant it's the first one I built myselt!</p>
-        <p>This site will update as I complete more of the tutorial, so keep checking back and see how my jorney is going!</p>
+		<nav>
+			<a href="/">Home</a>
+			<a href="./blog">Blog</a>
+			<a href="/about">About</a>
+		</nav>
+		<h1>{pageTitle}</h1>
+		<article>
+			<h2>... and my new Astro site!</h2>
+			<p>
+				I am working though Astro's introductory tutorial. This is the
+				second page on my website, ant it's the first one I built
+				myselt!
+			</p>
+			<p>
+				This site will update as I complete more of the tutorial, so
+				keep checking back and see how my jorney is going!k
+			</p>
+			<p>
+				Here is a few facts about me :D
+				<ul>
+					<li>My name is {identity.firstName}</li>
+					<li>I live in {identity.country} and i work as a</li>
+					<li>I work as a {identity.occupationn}</li>
+					<li>
+						My hobbies are:
+						<ul>
+							{
+								identity.hobbies.map((hobbie) => (
+									<li class="hobbies">{hobbie}</li>
+								))
+							}
+						</ul>
+					</li>
+					<li>
+						My skills are:
+						<ul>
+							{
+								identity.skills.map((skill) => (
+									<li class="skill">{skill}</li>
+								))
+							}
+						</ul>
+					</li>
+				</ul>
+			</p>
+			{happy && <p>I am happy to be learning Astro!</p>}
+
+			{finished && <p>I finished this tutorial!</p>}
+
+			{
+				goal === 3 ? (
+					<p>My goal is to finish in 3 days.</p>
+				) : (
+					<p>My goal is not 3 days.</p>
+				)
+			}
+		</article>
 	</body>
 </html>
