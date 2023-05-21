@@ -1,7 +1,9 @@
 ---
-const pageTitle = "About me";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "../styles/global.css";
 
-import '../styles/global.css';
+const pageTitle = "About me";
 
 const identity = {
 	firstName: "Hammahutz",
@@ -26,8 +28,8 @@ const finished: boolean = false;
 const goal: number = 3;
 
 const hobbieColor = "navy";
-const skillColor = "green"
-const fontWeight =  "bold";
+const skillColor = "green";
+const fontWeight = "bold";
 const textCase = "capitalize";
 ---
 
@@ -38,7 +40,7 @@ const textCase = "capitalize";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
-		<style define:vars={{hobbieColor, fontWeight, textCase, skillColor}}>
+		<style define:vars={{ hobbieColor, fontWeight, textCase, skillColor }}>
 			h1 {
 				color: purple;
 				font-size: 4rem;
@@ -50,17 +52,12 @@ const textCase = "capitalize";
 			.hobbies {
 				color: var(--hobbieColor);
 				font-weight: var(--fontWeight);
-				text-transform: var(--textCase)
+				text-transform: var(--textCase);
 			}
 		</style>
 	</head>
 	<body>
-		<nav>
-			<a href="/">Home</a>
-			<a href="./blog">Blog</a>
-			<a href="/about">About</a>
-		</nav>
-		<h1>{pageTitle}</h1>
+		<Header title={pageTitle} />
 		<article>
 			<h2>... and my new Astro site!</h2>
 			<p>
@@ -112,5 +109,9 @@ const textCase = "capitalize";
 				)
 			}
 		</article>
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>
