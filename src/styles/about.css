@@ -1,0 +1,22 @@
+:root {
+    --hobbyColor: navy;
+    --skillColor: green;
+    --fontWeight: bold;
+    --textCase: capitalize;
+}
+
+h1 {
+    color: purple;
+    font-size: 4rem;
+}
+
+.skill {
+    color: var(--skillColor);
+    font-weight: var(--fontWeight);
+}
+
+.hobbies {
+    color: var(--hobbyColor);
+    font-weight: var(--fontWeight);
+    text-transform: var(--textCase);
+}

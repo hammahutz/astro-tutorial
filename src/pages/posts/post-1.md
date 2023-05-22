@@ -1,5 +1,6 @@
 ---
-title: 'My First Bolg Post'
+layout: ../../layouts/MarkdownPostLayout.astro
+title: 'My First Blog Post'
 pubDate: 2023-05-20
 description: 'This is the first post of my new Astro blog.'
 author: 'hammahutz'
@@ -8,11 +9,7 @@ image:
     alt: 'The full Astro logo.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-# My First Blog Post
-
-Published on: 2023-05-20
-
-Welcome to my new blog about learning AStro!
+Welcome to my new blog about learning Astro!
 
 ## What I've accomplished
 
