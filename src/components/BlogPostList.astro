@@ -1,0 +1,12 @@
+---
+import BlogPost from "./BlogPost.astro";
+const { allPost } = Astro.props;
+---
+
+<ul>
+    {
+        allPost.map((post) => (
+            <BlogPost url={post.url} title={post.frontmatter.title} />
+        ))
+    }
+</ul>
