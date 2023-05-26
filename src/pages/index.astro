@@ -4,10 +4,15 @@ import Navigation from "../components/Navigation.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from "../components/Greeting.jsx";
 
 const pageTitle: string = "My astro page";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<h2>My awesome blog subtitle</h2>
+	<Greeting
+		client:load
+		messages={["Hi", "Hello", "Howdy", "Hey there", "Haj again"]}
+	/>
 </BaseLayout>
